@@ -11,6 +11,6 @@ Výhra v hre Reversi a ani nahrané body neznamenajú žiadnu finančnú ani in�
 
 Autori:
 -------------------------------------------------
-	Ľubomír Gallovič	  (xgallo03@stud.fit.vutbr.cz)
+	Ľubomír Gallovič	(xgallo03@stud.fit.vutbr.cz)
 	Michal Ormoš		(xormos00@stud.fit.vutbr.cz)
-	Martin Timko           (xtimko00@stud.fit.vutbr.cz)
+	Martin Timko		(xtimko00@stud.fit.vutbr.cz)
