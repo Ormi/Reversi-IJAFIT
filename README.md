@@ -13,4 +13,4 @@ Autori:
 -------------------------------------------------
 	Ľubomír Gallovič	  (xgallo03@stud.fit.vutbr.cz)
 	Michal Ormoš		(xormos00@stud.fit.vutbr.cz)
-	Martin Timko	(xtimko00@stud.fit.vutbr.cz)
+	Martin Timko    	(xtimko00@stud.fit.vutbr.cz)
