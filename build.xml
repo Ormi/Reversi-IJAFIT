@@ -1,0 +1,55 @@
+<project>
+
+    <target name="clean">
+        <delete includeemptydirs="true">
+			<fileset dir="build" includes="**/*"/>
+		</delete>
+        <delete includeemptydirs="true">
+			<fileset dir="dest-client" includes="**/*"/>
+		</delete>
+        <delete includeemptydirs="true">
+			<fileset dir="doc" includes="**/*"/>
+		</delete>
+    </target>
+
+    <target name="compile">
+        <javac srcdir="src" destdir="build"/>
+        <jar destfile="dest-client/othello-client.jar" basedir="build">
+            <manifest>
+                <attribute name="Main-Class" value="multiplayer.Client"/>
+            </manifest>
+            <fileset dir="lib">
+                <include name="img/**" />
+           </fileset>
+        </jar>
+
+        <jar destfile="dest-server/othello-server.jar" basedir="build">
+            <manifest>
+                <attribute name="Main-Class" value="multiplayer.Server"/>
+            </manifest>
+            <fileset dir="lib">
+                <include name="img/**" />
+           </fileset>
+        </jar>
+
+        <jar destfile="dest-client/othello-singleplayer.jar" basedir="build">
+            <manifest>
+                <attribute name="Main-Class" value="timogui.MenuGUI"/>
+            </manifest>
+            <fileset dir="lib">
+                <include name="img/**" />
+           </fileset>
+        </jar>
+
+        <javadoc sourcepath="src" destdir="doc"/>
+    </target>
+
+    <target name="run">
+        <java jar="dest-server/othello-server.jar" fork="true" spawn="true"/>
+        <java jar="dest-client/othello-singleplayer.jar" fork="true" spawn="true"/> 
+        <java jar="dest-client/othello-client.jar" fork="true" spawn="true"/>
+        <java jar="dest-client/othello-client.jar" fork="true" spawn="true"/>
+
+    </target>
+
+</project>
